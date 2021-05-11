@@ -1,0 +1,424 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://Game/Bounties/BountiesAtThePond/Bounty2.gd" type="Script" id=1]
+[ext_resource path="res://Game/Bounties/BountiesAtThePond/Bounty3.gd" type="Script" id=2]
+[ext_resource path="res://Game/Bounties/BountiesTemplate.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Assets/Art/Fonts/Space_Grotesk/static/SpaceGrotesk-Light.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://Game/Bounties/BountiesAtThePond/Bounty1.gd" type="Script" id=5]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.380392, 0.380392, 0.54902, 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 12
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 8
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 8
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 8
+font_data = ExtResource( 4 )
+
+[node name="BountiesAtThePond" instance=ExtResource( 3 )]
+
+[node name="Label" parent="." index="0"]
+text = "Bounties"
+
+[node name="ScrollContainer" parent="." index="2"]
+margin_right = -1.0
+margin_bottom = -36.0
+
+[node name="Bounties" parent="ScrollContainer" index="0"]
+margin_right = 131.0
+margin_bottom = 774.0
+
+[node name="Bounty1" type="Panel" parent="ScrollContainer/Bounties" index="0"]
+margin_right = 131.0
+margin_bottom = 340.0
+rect_min_size = Vector2( 0, 340 )
+custom_styles/panel = SubResource( 1 )
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer/Bounties/Bounty1" index="0"]
+margin_right = 144.0
+margin_bottom = 143.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Bounty" type="Label" parent="ScrollContainer/Bounties/Bounty1/VBoxContainer" index="0"]
+margin_right = 144.0
+margin_bottom = 35.0
+custom_fonts/font = SubResource( 2 )
+text = "  3 goldfish, 3 guppy,
+  3 flyingfish"
+
+[node name="Reward" type="Label" parent="ScrollContainer/Bounties/Bounty1/VBoxContainer" index="1"]
+margin_top = 39.0
+margin_right = 144.0
+margin_bottom = 64.0
+custom_fonts/font = SubResource( 3 )
+text = "  Reward: 
+  Unlock The Camp"
+
+[node name="Status" type="Label" parent="ScrollContainer/Bounties/Bounty1/VBoxContainer" index="2"]
+margin_top = 68.0
+margin_right = 144.0
+margin_bottom = 79.0
+custom_fonts/font = SubResource( 3 )
+text = "  Status: In Progress"
+
+[node name="FishProgressGoldfish" type="VBoxContainer" parent="ScrollContainer/Bounties/Bounty1/VBoxContainer" index="3"]
+margin_top = 83.0
+margin_right = 144.0
+margin_bottom = 166.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="YouGave" type="Label" parent="ScrollContainer/Bounties/Bounty1/VBoxContainer/FishProgressGoldfish" index="0"]
+margin_right = 144.0
+margin_bottom = 11.0
+custom_fonts/font = SubResource( 4 )
+text = "  You Gave 0/3 goldfish"
+
+[node name="YouHave" type="Label" parent="ScrollContainer/Bounties/Bounty1/VBoxContainer/FishProgressGoldfish" index="1"]
+margin_top = 15.0
+margin_right = 144.0
+margin_bottom = 26.0
+custom_fonts/font = SubResource( 3 )
+text = "  You Have 999 fish"
+
+[node name="YouHaveQuality" type="Label" parent="ScrollContainer/Bounties/Bounty1/VBoxContainer/FishProgressGoldfish" index="2"]
+margin_top = 30.0
+margin_right = 144.0
+margin_bottom = 41.0
+custom_fonts/font = SubResource( 3 )
+text = "  You Have 999 quality"
+
+[node name="GiveGoldfish" type="Button" parent="ScrollContainer/Bounties/Bounty1/VBoxContainer/FishProgressGoldfish" index="3"]
+margin_top = 45.0
+margin_right = 144.0
+margin_bottom = 62.0
+custom_fonts/font = SubResource( 5 )
+text = "Give goldfish"
+
+[node name="GiveQualityGoldfish" type="Button" parent="ScrollContainer/Bounties/Bounty1/VBoxContainer/FishProgressGoldfish" index="4"]
+margin_top = 66.0
+margin_right = 144.0
+margin_bottom = 83.0
+custom_fonts/font = SubResource( 5 )
+text = "Give quality goldfish"
+
+[node name="FishProgressGuppy" type="VBoxContainer" parent="ScrollContainer/Bounties/Bounty1/VBoxContainer" index="4"]
+margin_top = 170.0
+margin_right = 144.0
+margin_bottom = 253.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="YouGave" type="Label" parent="ScrollContainer/Bounties/Bounty1/VBoxContainer/FishProgressGuppy" index="0"]
+margin_right = 144.0
+margin_bottom = 11.0
+custom_fonts/font = SubResource( 4 )
+text = "  You Gave 0/3 guppy"
+
+[node name="YouHave" type="Label" parent="ScrollContainer/Bounties/Bounty1/VBoxContainer/FishProgressGuppy" index="1"]
+margin_top = 15.0
+margin_right = 144.0
+margin_bottom = 26.0
+custom_fonts/font = SubResource( 4 )
+text = "  You Have 999 fish"
+
+[node name="YouHaveQuality" type="Label" parent="ScrollContainer/Bounties/Bounty1/VBoxContainer/FishProgressGuppy" index="2"]
+margin_top = 30.0
+margin_right = 144.0
+margin_bottom = 41.0
+custom_fonts/font = SubResource( 4 )
+text = "  You Have 999 quality"
+
+[node name="GiveGuppy" type="Button" parent="ScrollContainer/Bounties/Bounty1/VBoxContainer/FishProgressGuppy" index="3"]
+margin_top = 45.0
+margin_right = 144.0
+margin_bottom = 62.0
+custom_fonts/font = SubResource( 5 )
+text = "Give guppy"
+
+[node name="GiveQualityGuppy" type="Button" parent="ScrollContainer/Bounties/Bounty1/VBoxContainer/FishProgressGuppy" index="4"]
+margin_top = 66.0
+margin_right = 144.0
+margin_bottom = 83.0
+custom_fonts/font = SubResource( 5 )
+text = "Give quality guppy"
+
+[node name="FishProgressFlyingfish" type="VBoxContainer" parent="ScrollContainer/Bounties/Bounty1/VBoxContainer" index="5"]
+margin_top = 257.0
+margin_right = 144.0
+margin_bottom = 340.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="YouGave" type="Label" parent="ScrollContainer/Bounties/Bounty1/VBoxContainer/FishProgressFlyingfish" index="0"]
+margin_right = 144.0
+margin_bottom = 11.0
+custom_fonts/font = SubResource( 4 )
+text = "  You Gave 0/3 flyingfish"
+
+[node name="YouHave" type="Label" parent="ScrollContainer/Bounties/Bounty1/VBoxContainer/FishProgressFlyingfish" index="1"]
+margin_top = 15.0
+margin_right = 144.0
+margin_bottom = 26.0
+custom_fonts/font = SubResource( 4 )
+text = "  You Have 999 fish"
+
+[node name="YouHaveQuality" type="Label" parent="ScrollContainer/Bounties/Bounty1/VBoxContainer/FishProgressFlyingfish" index="2"]
+margin_top = 30.0
+margin_right = 144.0
+margin_bottom = 41.0
+custom_fonts/font = SubResource( 4 )
+text = "  You Have 999 quality"
+
+[node name="GiveFlyingfish" type="Button" parent="ScrollContainer/Bounties/Bounty1/VBoxContainer/FishProgressFlyingfish" index="3"]
+margin_top = 45.0
+margin_right = 144.0
+margin_bottom = 62.0
+custom_fonts/font = SubResource( 5 )
+text = "Give flyingfish"
+
+[node name="GiveQualityFlyingfish" type="Button" parent="ScrollContainer/Bounties/Bounty1/VBoxContainer/FishProgressFlyingfish" index="4"]
+margin_top = 66.0
+margin_right = 144.0
+margin_bottom = 83.0
+custom_fonts/font = SubResource( 5 )
+text = "Give quality flyingfish"
+
+[node name="Bounty2" type="Panel" parent="ScrollContainer/Bounties" index="1"]
+margin_top = 350.0
+margin_right = 131.0
+margin_bottom = 603.0
+rect_min_size = Vector2( 0, 253 )
+custom_styles/panel = SubResource( 1 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer/Bounties/Bounty2" index="0"]
+margin_right = 134.0
+margin_bottom = 171.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Bounty" type="Label" parent="ScrollContainer/Bounties/Bounty2/VBoxContainer" index="0"]
+margin_right = 134.0
+margin_bottom = 35.0
+size_flags_horizontal = 3
+custom_fonts/font = SubResource( 2 )
+text = "  3 biggergoldfish, 3 
+  biggerguppy"
+autowrap = true
+
+[node name="Reward" type="Label" parent="ScrollContainer/Bounties/Bounty2/VBoxContainer" index="1"]
+margin_top = 39.0
+margin_right = 134.0
+margin_bottom = 64.0
+custom_fonts/font = SubResource( 3 )
+text = "  Reward: 
+  Unlock 4 perk blueprints"
+
+[node name="Status" type="Label" parent="ScrollContainer/Bounties/Bounty2/VBoxContainer" index="2"]
+margin_top = 68.0
+margin_right = 134.0
+margin_bottom = 79.0
+custom_fonts/font = SubResource( 3 )
+text = "  Status: In Progress"
+
+[node name="FishProgressBiggerGoldfish" type="VBoxContainer" parent="ScrollContainer/Bounties/Bounty2/VBoxContainer" index="3"]
+margin_top = 83.0
+margin_right = 134.0
+margin_bottom = 166.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="YouGave" type="Label" parent="ScrollContainer/Bounties/Bounty2/VBoxContainer/FishProgressBiggerGoldfish" index="0"]
+margin_right = 134.0
+margin_bottom = 11.0
+custom_fonts/font = SubResource( 4 )
+text = "  You Gave 0/3 biggergoldfish"
+
+[node name="YouHave" type="Label" parent="ScrollContainer/Bounties/Bounty2/VBoxContainer/FishProgressBiggerGoldfish" index="1"]
+margin_top = 15.0
+margin_right = 134.0
+margin_bottom = 26.0
+custom_fonts/font = SubResource( 3 )
+text = "  You Have 999 fish"
+
+[node name="YouHaveQuality" type="Label" parent="ScrollContainer/Bounties/Bounty2/VBoxContainer/FishProgressBiggerGoldfish" index="2"]
+margin_top = 30.0
+margin_right = 134.0
+margin_bottom = 41.0
+custom_fonts/font = SubResource( 3 )
+text = "  You Have 999 quality"
+
+[node name="GiveBiggerGoldfish" type="Button" parent="ScrollContainer/Bounties/Bounty2/VBoxContainer/FishProgressBiggerGoldfish" index="3"]
+margin_top = 45.0
+margin_right = 134.0
+margin_bottom = 62.0
+custom_fonts/font = SubResource( 5 )
+text = "Give biggergoldfish"
+
+[node name="GiveQualityBiggerGoldfish" type="Button" parent="ScrollContainer/Bounties/Bounty2/VBoxContainer/FishProgressBiggerGoldfish" index="4"]
+margin_top = 66.0
+margin_right = 134.0
+margin_bottom = 83.0
+custom_fonts/font = SubResource( 5 )
+text = "Give quality biggergoldfish"
+
+[node name="FishProgressBiggerGuppy" type="VBoxContainer" parent="ScrollContainer/Bounties/Bounty2/VBoxContainer" index="4"]
+margin_top = 170.0
+margin_right = 134.0
+margin_bottom = 253.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="YouGave" type="Label" parent="ScrollContainer/Bounties/Bounty2/VBoxContainer/FishProgressBiggerGuppy" index="0"]
+margin_right = 134.0
+margin_bottom = 11.0
+custom_fonts/font = SubResource( 4 )
+text = "  You Gave 0/3 biggerguppy"
+
+[node name="YouHave" type="Label" parent="ScrollContainer/Bounties/Bounty2/VBoxContainer/FishProgressBiggerGuppy" index="1"]
+margin_top = 15.0
+margin_right = 134.0
+margin_bottom = 26.0
+custom_fonts/font = SubResource( 4 )
+text = "  You Have 999 fish"
+
+[node name="YouHaveQuality" type="Label" parent="ScrollContainer/Bounties/Bounty2/VBoxContainer/FishProgressBiggerGuppy" index="2"]
+margin_top = 30.0
+margin_right = 134.0
+margin_bottom = 41.0
+custom_fonts/font = SubResource( 4 )
+text = "  You Have 999 quality"
+
+[node name="GiveBiggerGuppy" type="Button" parent="ScrollContainer/Bounties/Bounty2/VBoxContainer/FishProgressBiggerGuppy" index="3"]
+margin_top = 45.0
+margin_right = 134.0
+margin_bottom = 62.0
+custom_fonts/font = SubResource( 5 )
+text = "Give biggerguppy"
+
+[node name="GiveQualityBiggerGuppy" type="Button" parent="ScrollContainer/Bounties/Bounty2/VBoxContainer/FishProgressBiggerGuppy" index="4"]
+margin_top = 66.0
+margin_right = 134.0
+margin_bottom = 83.0
+custom_fonts/font = SubResource( 5 )
+text = "Give quality biggerguppy"
+
+[node name="Bounty3" type="Panel" parent="ScrollContainer/Bounties" index="2"]
+margin_top = 613.0
+margin_right = 131.0
+margin_bottom = 774.0
+rect_min_size = Vector2( 0, 161 )
+custom_styles/panel = SubResource( 1 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer/Bounties/Bounty3" index="0"]
+margin_right = 134.0
+margin_bottom = 110.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Bounty" type="Label" parent="ScrollContainer/Bounties/Bounty3/VBoxContainer" index="0"]
+margin_right = 134.0
+margin_bottom = 16.0
+custom_fonts/font = SubResource( 2 )
+text = "  3 koi"
+
+[node name="Reward" type="Label" parent="ScrollContainer/Bounties/Bounty3/VBoxContainer" index="1"]
+margin_top = 20.0
+margin_right = 134.0
+margin_bottom = 59.0
+custom_fonts/font = SubResource( 3 )
+text = "  Reward: 
+  Unlock Training Rod
+  blueprint, unlock The Lake"
+
+[node name="Status" type="Label" parent="ScrollContainer/Bounties/Bounty3/VBoxContainer" index="2"]
+margin_top = 63.0
+margin_right = 134.0
+margin_bottom = 74.0
+custom_fonts/font = SubResource( 3 )
+text = "  Status: In Progress"
+
+[node name="FishProgressKoi" type="VBoxContainer" parent="ScrollContainer/Bounties/Bounty3/VBoxContainer" index="3"]
+margin_top = 78.0
+margin_right = 134.0
+margin_bottom = 161.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="YouGave" type="Label" parent="ScrollContainer/Bounties/Bounty3/VBoxContainer/FishProgressKoi" index="0"]
+margin_right = 134.0
+margin_bottom = 11.0
+custom_fonts/font = SubResource( 4 )
+text = "  You Gave 0/3 koi"
+
+[node name="YouHave" type="Label" parent="ScrollContainer/Bounties/Bounty3/VBoxContainer/FishProgressKoi" index="1"]
+margin_top = 15.0
+margin_right = 134.0
+margin_bottom = 26.0
+custom_fonts/font = SubResource( 3 )
+text = "  You Have 999 fish"
+
+[node name="YouHaveQuality" type="Label" parent="ScrollContainer/Bounties/Bounty3/VBoxContainer/FishProgressKoi" index="2"]
+margin_top = 30.0
+margin_right = 134.0
+margin_bottom = 41.0
+custom_fonts/font = SubResource( 3 )
+text = "  You Have 999 quality"
+
+[node name="GiveKoi" type="Button" parent="ScrollContainer/Bounties/Bounty3/VBoxContainer/FishProgressKoi" index="3"]
+margin_top = 45.0
+margin_right = 134.0
+margin_bottom = 62.0
+custom_fonts/font = SubResource( 5 )
+text = "Give koi"
+
+[node name="GiveQualityKoi" type="Button" parent="ScrollContainer/Bounties/Bounty3/VBoxContainer/FishProgressKoi" index="4"]
+margin_top = 66.0
+margin_right = 134.0
+margin_bottom = 83.0
+custom_fonts/font = SubResource( 5 )
+text = "Give quality koi"
+[connection signal="pressed" from="ScrollContainer/Bounties/Bounty1/VBoxContainer/FishProgressGoldfish/GiveGoldfish" to="ScrollContainer/Bounties/Bounty1" method="_on_GiveGoldfish_pressed"]
+[connection signal="pressed" from="ScrollContainer/Bounties/Bounty1/VBoxContainer/FishProgressGoldfish/GiveQualityGoldfish" to="ScrollContainer/Bounties/Bounty1" method="_on_GiveQualityGoldfish_pressed"]
+[connection signal="pressed" from="ScrollContainer/Bounties/Bounty1/VBoxContainer/FishProgressGuppy/GiveGuppy" to="ScrollContainer/Bounties/Bounty1" method="_on_GiveGuppy_pressed"]
+[connection signal="pressed" from="ScrollContainer/Bounties/Bounty1/VBoxContainer/FishProgressGuppy/GiveQualityGuppy" to="ScrollContainer/Bounties/Bounty1" method="_on_GiveQualityGuppy_pressed"]
+[connection signal="pressed" from="ScrollContainer/Bounties/Bounty1/VBoxContainer/FishProgressFlyingfish/GiveFlyingfish" to="ScrollContainer/Bounties/Bounty1" method="_on_GiveFlyingfish_pressed"]
+[connection signal="pressed" from="ScrollContainer/Bounties/Bounty1/VBoxContainer/FishProgressFlyingfish/GiveQualityFlyingfish" to="ScrollContainer/Bounties/Bounty1" method="_on_GiveQualityFlyingfish_pressed"]
+[connection signal="pressed" from="ScrollContainer/Bounties/Bounty2/VBoxContainer/FishProgressBiggerGoldfish/GiveBiggerGoldfish" to="ScrollContainer/Bounties/Bounty2" method="_on_GiveBiggerGoldfish_pressed"]
+[connection signal="pressed" from="ScrollContainer/Bounties/Bounty2/VBoxContainer/FishProgressBiggerGoldfish/GiveQualityBiggerGoldfish" to="ScrollContainer/Bounties/Bounty2" method="_on_GiveQualityBiggerGoldfish_pressed"]
+[connection signal="pressed" from="ScrollContainer/Bounties/Bounty2/VBoxContainer/FishProgressBiggerGuppy/GiveBiggerGuppy" to="ScrollContainer/Bounties/Bounty2" method="_on_GiveBiggerGuppy_pressed"]
+[connection signal="pressed" from="ScrollContainer/Bounties/Bounty2/VBoxContainer/FishProgressBiggerGuppy/GiveQualityBiggerGuppy" to="ScrollContainer/Bounties/Bounty2" method="_on_GiveQualityBiggerGuppy_pressed"]
+[connection signal="pressed" from="ScrollContainer/Bounties/Bounty3/VBoxContainer/FishProgressKoi/GiveKoi" to="ScrollContainer/Bounties/Bounty3" method="_on_GiveKoi_pressed"]
+[connection signal="pressed" from="ScrollContainer/Bounties/Bounty3/VBoxContainer/FishProgressKoi/GiveQualityKoi" to="ScrollContainer/Bounties/Bounty3" method="_on_GiveQualityKoi_pressed"]

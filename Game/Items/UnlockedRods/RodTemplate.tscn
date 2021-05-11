@@ -1,0 +1,121 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Assets/Art/Fonts/Space_Grotesk/static/SpaceGrotesk-Light.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Assets/Art/Fonts/Space_Grotesk/static/SpaceGrotesk-Bold.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://Game/Items/UnlockedRods/RodTemplate.gd" type="Script" id=3]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.411765, 0.34902, 0.317647, 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 8
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 8
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 8
+font_data = ExtResource( 1 )
+
+[node name="RodTemplate" type="Panel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_bottom = -176.0
+rect_min_size = Vector2( 0, 80 )
+custom_styles/panel = SubResource( 1 )
+script = ExtResource( 3 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+margin_right = 144.0
+margin_bottom = 71.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RodName" type="Label" parent="VBoxContainer"]
+margin_right = 144.0
+margin_bottom = 11.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = SubResource( 2 )
+text = "   RodName"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AreaLvl" type="Label" parent="VBoxContainer"]
+margin_top = 15.0
+margin_right = 144.0
+margin_bottom = 26.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = SubResource( 3 )
+text = "   Up to Area lvl 10"
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PerkSlotsQty" type="Label" parent="VBoxContainer"]
+margin_top = 30.0
+margin_right = 144.0
+margin_bottom = 41.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = SubResource( 3 )
+text = "   Perk slots: 10"
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SpecialTrait" type="Label" parent="VBoxContainer"]
+margin_top = 45.0
+margin_right = 144.0
+margin_bottom = 56.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = SubResource( 3 )
+text = "   Special Trait"
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Description" type="Label" parent="VBoxContainer"]
+margin_top = 60.0
+margin_right = 144.0
+margin_bottom = 71.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = SubResource( 3 )
+text = "   Description"
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Cost" type="Label" parent="."]
+margin_left = 74.5
+margin_top = 6.0
+margin_right = 141.5
+margin_bottom = 20.0
+custom_fonts/font = SubResource( 3 )
+text = "   Cost: 999999g"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BuyButton" type="Button" parent="."]
+margin_left = 82.0
+margin_top = 21.0
+margin_right = 120.0
+margin_bottom = 41.0
+custom_fonts/font = SubResource( 4 )
+text = "Buy"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="BuyButton" to="." method="_on_BuyButton_pressed"]

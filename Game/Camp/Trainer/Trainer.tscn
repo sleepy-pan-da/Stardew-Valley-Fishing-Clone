@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Game/Camp/CampShopTemplate.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Game/Camp/Trainer/Trainer.gd" type="Script" id=2]
+[ext_resource path="res://Assets/Art/Fonts/Space_Grotesk/static/SpaceGrotesk-Light.ttf" type="DynamicFontData" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 3 )
+
+[node name="Trainer" instance=ExtResource( 1 )]
+margin_bottom = -34.0
+script = ExtResource( 2 )
+
+[node name="Label" parent="." index="0"]
+margin_bottom = -203.0
+text = "Trainer"
+
+[node name="BuyPerksButton" type="Button" parent="Options" index="0"]
+margin_right = 144.0
+margin_bottom = 95.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = SubResource( 1 )
+text = "Buy Perks"
+
+[node name="LockedPerksButton" type="Button" parent="Options" index="1"]
+margin_top = 99.0
+margin_right = 144.0
+margin_bottom = 195.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = SubResource( 1 )
+text = "Locked Perks"
+[connection signal="pressed" from="Options/BuyPerksButton" to="." method="_on_BuyPerksButton_pressed"]
+[connection signal="pressed" from="Options/LockedPerksButton" to="." method="_on_LockedPerksButton_pressed"]

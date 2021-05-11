@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Game/Fishing/FishingAreas/FishingAtThePond/FishingAtThePond.gd" type="Script" id=1]
+[ext_resource path="res://Game/Fishing/FishingAreas/FishingAreaTemplate.tscn" type="PackedScene" id=2]
+
+[node name="FishingAtThePond" instance=ExtResource( 2 )]
+script = ExtResource( 1 )
+
+[node name="InstanceManager" parent="." index="0"]
+position = Vector2( 45, 185 )
+
+[node name="EquippedLoadout" parent="." index="4"]
+margin_left = 0.0
+margin_top = 28.7882
+margin_right = 112.0
+margin_bottom = 67.7882

@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Game/Items/UnlockedPerks/PerkTemplate.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Game/Items/UnlockedPerks/KuehLapis/KuehLapis.gd" type="Script" id=2]
+
+[node name="KuehLapis" instance=ExtResource( 1 )]
+rect_min_size = Vector2( 0, 100 )
+script = ExtResource( 2 )
+
+[node name="PerkName" parent="VBoxContainer" index="0"]
+margin_bottom = 16.0
+text = "   Kueh Lapis"
+
+[node name="Cost" parent="VBoxContainer" index="1"]
+margin_top = 20.0
+margin_bottom = 36.0
+text = "    Cost: 1000G"
+
+[node name="Description" parent="VBoxContainer" index="2"]
+margin_top = 40.0
+margin_bottom = 79.0
+text = "    Fish is worth 25g more with 
+    each successive catch.
+    (Stacks up to 9 times)"
+
+[node name="PerkSlotConsumption" parent="VBoxContainer" index="3"]
+margin_top = 83.0
+margin_bottom = 100.0
+text = "    Consumes 1 perk slots"

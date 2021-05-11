@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Game/Items/UnlockedPerks/PerkTemplate.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Game/Items/UnlockedPerks/TreasureHunter/TreasureHunter.gd" type="Script" id=2]
+
+[node name="TreasureHunter" instance=ExtResource( 1 )]
+script = ExtResource( 2 )
+
+[node name="PerkName" parent="VBoxContainer" index="0"]
+text = "   Treasure Hunter"
+
+[node name="Cost" parent="VBoxContainer" index="1"]
+text = "    Cost: 1000G"
+
+[node name="Description" parent="VBoxContainer" index="2"]
+text = "    Treasures are worth 1.5x more."
+
+[node name="PerkSlotConsumption" parent="VBoxContainer" index="3"]
+text = "    Consumes 1 perk slot"

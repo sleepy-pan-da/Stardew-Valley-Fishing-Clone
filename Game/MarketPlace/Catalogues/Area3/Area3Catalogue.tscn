@@ -1,0 +1,123 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Game/MarketPlace/Catalogues/CatalogueTemplate.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Game/MarketPlace/Catalogues/Area3/Area3Catalogue.gd" type="Script" id=2]
+[ext_resource path="res://Assets/Art/Fonts/Space_Grotesk/static/SpaceGrotesk-Light.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://Assets/Art/Fonts/Space_Grotesk/static/SpaceGrotesk-Regular.ttf" type="DynamicFontData" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 10
+font_data = ExtResource( 3 )
+
+[node name="Area3Catalogue" instance=ExtResource( 1 )]
+script = ExtResource( 2 )
+
+[node name="VBoxContainer" parent="ScrollContainer" index="0"]
+margin_right = 137.0
+margin_bottom = 560.0
+
+[node name="Area3Lvl2Bait" type="Label" parent="ScrollContainer/VBoxContainer" index="0"]
+margin_right = 137.0
+margin_bottom = 21.0
+custom_fonts/font = SubResource( 1 )
+text = " Area3Lvl2Bait"
+
+[node name="Area3Lvl2Description" type="Label" parent="ScrollContainer/VBoxContainer" index="1"]
+margin_top = 25.0
+margin_right = 137.0
+margin_bottom = 70.0
+custom_fonts/font = SubResource( 2 )
+text = "-Allows you to catch lvl2 
+ fish in area 3
+"
+
+[node name="Area3Lvl3Bait" type="Label" parent="ScrollContainer/VBoxContainer" index="2"]
+margin_top = 74.0
+margin_right = 137.0
+margin_bottom = 95.0
+custom_fonts/font = SubResource( 1 )
+text = " Area3Lvl3Bait"
+
+[node name="Area3Lvl3Description" type="Label" parent="ScrollContainer/VBoxContainer" index="3"]
+margin_top = 99.0
+margin_right = 137.0
+margin_bottom = 144.0
+custom_fonts/font = SubResource( 2 )
+text = "-Allows you to catch lvl3
+ fish in area 3
+"
+
+[node name="ShorterFinishLine" type="Label" parent="ScrollContainer/VBoxContainer" index="4"]
+margin_top = 148.0
+margin_right = 137.0
+margin_bottom = 193.0
+custom_fonts/font = SubResource( 1 )
+text = " Shorter Finish
+ Line"
+
+[node name="ShorterFinishLineDescription" type="Label" parent="ScrollContainer/VBoxContainer" index="5"]
+margin_top = 197.0
+margin_right = 137.0
+margin_bottom = 258.0
+custom_fonts/font = SubResource( 2 )
+text = "-Value needed to fill
+ progress bar is lesser
+-Consumes 2 slots
+"
+
+[node name="KuehLapis" type="Label" parent="ScrollContainer/VBoxContainer" index="6"]
+margin_top = 262.0
+margin_right = 137.0
+margin_bottom = 283.0
+custom_fonts/font = SubResource( 1 )
+text = " Kueh Lapis"
+
+[node name="KuehLapisDescription" type="Label" parent="ScrollContainer/VBoxContainer" index="7"]
+margin_top = 287.0
+margin_right = 137.0
+margin_bottom = 364.0
+custom_fonts/font = SubResource( 2 )
+text = "-Fish is worth 25g more
+  with each successive
+  catch (Stacks 9 times)
+-Consumes 2 slots
+"
+
+[node name="UnscathedBait" type="Label" parent="ScrollContainer/VBoxContainer" index="8"]
+margin_top = 368.0
+margin_right = 137.0
+margin_bottom = 389.0
+custom_fonts/font = SubResource( 1 )
+text = " Unscathed Bait"
+
+[node name="UnscathedBaitDescription" type="Label" parent="ScrollContainer/VBoxContainer" index="9"]
+margin_top = 393.0
+margin_right = 137.0
+margin_bottom = 470.0
+custom_fonts/font = SubResource( 2 )
+text = "-Bait have a 50% chance 
+ to not be consumed 
+ when fishing
+-Consumes 2 slots
+"
+
+[node name="SecondChance" type="Label" parent="ScrollContainer/VBoxContainer" index="10"]
+margin_top = 474.0
+margin_right = 137.0
+margin_bottom = 495.0
+custom_fonts/font = SubResource( 1 )
+text = " Second Chance"
+
+[node name="SecondChanceDescription" type="Label" parent="ScrollContainer/VBoxContainer" index="11"]
+margin_top = 499.0
+margin_right = 137.0
+margin_bottom = 560.0
+custom_fonts/font = SubResource( 2 )
+text = "-You can afford one more 
+ chance for a perfect catch
+-Consumes 2 slots
+"
+[connection signal="pressed" from="GoBackToMenuButton" to="." method="_on_GoBackToMenuButton_pressed"]

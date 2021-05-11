@@ -1,0 +1,294 @@
+#Useful info#
+
+(global scripts)
+PlayerData
+FishData
+BackgroundMusic
+ShopData
+AreaData
+ItemData
+BountyData
+PerkData
+
+btm.y = 243
+top.y = 11
+fish_start_position.y = 222
+
+
+---7 Dec Monday---
+Added bobber system
+
+---8 Dec Tuesday---
+Redo bobber system
+Added moving of catchable area
+Added immovable fish
+
+---9 Dec Wednesday---
+Integrated the systems together
+Added some basic sounds to give some game feel for fishing
+
+
+
+Added moving fish (floater, sinker and steady)
+
+---10 Dec Thursday---
+Added a simple selling system for players to get cash from their caught fish
+Improved visual feedback for the catching part
+	-catchable area will change colour based on whether fish is inside
+	-fish reward screen will show what fish you caught
+
+---11 Dec Friday---
+Cleaned up code
+Implemented templates that will help in the future
+Implemented some functions that can tweak fishing gameplay
+Added travel
+Added shop
+Added map
+Integrate the systems together
+implement item template to help in the future
+
+
+
+#---12 Dec Saturday---
+Jotted down important templates that would be useful in the future
+Came up with FishingAreaTemplate
+Added check price functionality for shop
+Added this functionality -> When instanting the catching rod, it will generate the fish that bit the rod based on what area you are in
+Added a new area
+Added being able to catch different fish at different areas 
+Added steady2 and steady3
+Added a testing function in the rod code
+
+#---13 Dec Sunday---
+Added a win screen to complete the first prototype
+Current fish count is 5
+
+#---14 Dec Monday---
+Made it android version of the game
+the game code has a mobile version as well as a pc version
+
+#---15 Dec Tuesday---
+Implement a perfect notification when fish is caught perfectly
+Implement quality fish when caught perfectly
+Need to implement bait system (shop and equipping of bait)
+
+Need to create bait from bait template
+
+#---16 Dec Wednesday---
+Implement baits in shop
+Implement rods in shop
+Implement loadout system that allows you to equip your rod and bait of choice
+Implement fish biting based on bait
+Implement ui of bait and rod used in fishing ui
+Implement the training rod and the amateur rod
+Tuned the fish slightly in terms of difficulty
+Added a feature for players to simulate their rod in the loadout
+
+#---17 Dec Thursday---
+shifted some buttons in the starting area to improve ui experience
+fixed a bug for fishing area template
+cleaned code
+added an enter shop sound
+
+#---18 Dec Friday---
+Implemented treasure that gives gold when you unlocked it along with a successive catch
+
+#---19 Dec Saturday---
+Implemented bounties
+Under loadout, implemented a system to choose what perks to choose
+Implemented marketplace
+Implemented catalogue for the general shop
+
+#---20 Dec Sunday---
+Rods and perks can only be bought once
+Implement 12 perks
+NEED TO SOLVE TREASURE SPAWNING BUG
+
+#---21 Dec Monday---
+implement the progression system for the bounty
+Implement the other 6 fish
+Implemented area2
+(NEED TO DO)
+implement 3 areas, each with 3 fish
+implement catalogue for the shops
+
+#---28 Dec Monday---
+Clean the code
+
+#---29 Dec Tuesday---
+Implemented 6 fish in starting area
+There is now only 1 fish reward scene for all the fishes
+Implementing baits
+Changed the bounties to fit the 6 fishes
+
+#---30 Dec Wednesday---
+Implemented these stuff:
+	Fishing page needs to have 
+		(DONE)
+		bar which says your fishing experience at this fishing area (like mousehunt)   
+		Loadout button
+		gaining of area experience from fishing
+		Appearance of fish based on area's experience
+	Rods need to have
+		(DONE)
+		area level allowed to fish at
+
+#---31 Dec Thursday---
+(Done)
+Rework bobber system to transitition from Notbitten -> Bitten -> Stale
+Perk slots should be tied to items like poe
+You can now equip perks at loadouts
+BaitShop need to have
+	sell fish option
+	buy items option
+(NOT DONE) 
+Rework buying of stuff at the bait shop (Need look at mousehunt)
+Implement Rodsmith's
+	crafting rods
+Implement Cartographer's
+	Buying of maps
+Implement Trainer's
+	Buying of perks
+Bounties
+	e.g. Catch a 30 salmon, quality salmon counts as 3
+	Reward: Get wooden rod receipe at the Rodsmith
+	Reward: Unlock a map at the Cartographer
+	Reward: Unlock a perk at the Trainer
+	
+game loop 
+catch fish, clear bounties, unlock better rods, catch harder fish
+
+#---1 Jan Friday---
+Added bait panel
+Added rod panel
+Added locked rod panel
+Added map panel
+Added perk panel
+Added locked perk panel
+
+#---2 Jan Saturday---
+Need to settle bounties?
+	
+Bait Shop need to have
+	sell fish
+	buy stuff
+Rodsmith need to have
+	craft rods
+	turn in receipe option so as to unlock new items in the shop
+		clicking the receipes will show what item it is for and how/where to get
+Cartographer need to have
+	buy maps to different places
+	receive map pieces so as to unlock new maps in the shop
+		clicking the map pieces will show what map it is for and how/where to get
+Trainer need to have
+	buy perks from him
+	receipe perk lessons to unlock new perks for sale
+		clicking the perk lessons will show what perk it is for and how/where to get
+Loadout need to have
+	inventory that holds receipes and map fragments
+Bounties will give you receipes for items
+e.g. Turn in 5 salmons
+	Reward: wooden rod receipe
+Quality fish are more likely to drop fish parts as loot
+Items can only be obtained with fish parts
+
+#---3 Jan Sunday---
+Cleaned code slightly
+
+#---4 Jan Monday---
+Renaming fishes to their proper names
+Set up bounty1 based on new fishnames
+Need to come up with panels for perks
+What happens when u lvl up your area experience
+Reworked the way fish is generated so that a specific fish will spawn after some time
+
+#---5 Jan Tuesday---
+Need to come up with the other 2 areas which includes
+	2 bounties
+	more fishhh
+
+Need some effect so players know that they completed a bounty
+Need some effect so players know that they leveled up
+
+(NEED TO DO)
+Implement multiple fish in one area
+Implement rarities to fishes
+Need to playtest thru all 6 fish
+Think of baits/rods?
+
+Rename quality fishes to perfect
+Shift loadout button to fishing page (quality of life)
+Shift perks to inventory?
+Implement some way to teach player's the fishing mechanic, as well as perks
+Allow for equiping perks at the start
+Make it rewarding for noobs in bounty system
+Implement a save function
+Add shaking effect for bobber
+Fix the font of the pop in loadout page
+Add reeling sound when catching fish
+
+
+
+
+###things to take note of from gina###
+play living alone?
+customization and upgrades
+skins?
+have some milestones?
+have customization of rod feel? like faster filling of bar, but also faster depletion of bar
+each rod has only one main diff?
+maybe certain areas the water very murky xD you need a special glowing road to see the bait
+
+###things to take note of from junsheng###
+have a risk reward system where small fish can be used as bait to catch big fish
+experimenting with diff parts of rod for customisation
+need research parts that make up the rod
+-top speed
+-acceleration/twitchiness
+-amount filled in bar per frame
+-catchable area
+-time taken for fish to bite
+
+
+#things to do for tmr
+clean up code?
+think of game design for next week like things to work on for the game
+need to read up on anchors?
+
+
+Need to clean up code
+Need to add a bait system?
+Need to implement whether fish will bite based on bait
+
+
+For future reference
+Bobber needs to check whether any fish will even bite your bobber at this fishing area
+
+
+#first 4
+"BiggerNet":				false,
+"FishCharmer":				false,
+"KuehLapis":				false,
+"TreasureMagnet":			false,
+
+#second 4
+"HeadStart":				false,
+"ShorterFinishLine":		false,
+"Connoisseur":				false,
+"TreasureHunter":			false,
+
+#last 4
+"HotShot":					false,
+"UnscathedBait":			false,
+"SecondChance":				false,
+"FishMonger":				false,
+
+"anchovy":		preload("res://Game/Fish/Anchovy/Anchovy.tscn"),
+							"sardine":		preload("res://Game/Fish/Sardine/Sardine.tscn"),
+							"tuna":			preload("res://Game/Fish/Tuna/Tuna.tscn"),
+							"cod":			preload("res://Game/Fish/Cod/Cod.tscn"),
+							"pike":			preload("res://Game/Fish/Pike/Pike.tscn"),
+							"herring":		preload("res://Game/Fish/Herring/Herring.tscn")
+
+
+

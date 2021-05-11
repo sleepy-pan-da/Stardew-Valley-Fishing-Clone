@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Game/UI/UiTemplate.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Game/Bounties/BountiesTemplate.gd" type="Script" id=4]
+
+[node name="BountiesTemplate" instance=ExtResource( 2 )]
+script = ExtResource( 4 )
+
+[node name="Label" parent="." index="0"]
+margin_bottom = -236.0
+text = "Bounty Template"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="." index="2"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 23.0
+margin_bottom = -34.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Bounties" type="VBoxContainer" parent="ScrollContainer" index="0"]
+margin_right = 144.0
+margin_bottom = 198.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 10
+[connection signal="pressed" from="GoBackToMenuButton" to="." method="_on_GoBackToMenuButton_pressed"]

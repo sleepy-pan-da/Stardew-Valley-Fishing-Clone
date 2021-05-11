@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Game/UI/BuyConsumableButtonTemplate.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Assets/Art/Fonts/Space_Grotesk/static/SpaceGrotesk-Light.ttf" type="DynamicFontData" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+size = 8
+font_data = ExtResource( 2 )
+
+[sub_resource type="GDScript" id=2]
+script/source = "extends \"res://Game/UI/BuyConsumableButtonTemplate.gd\"
+
+func add_to_inventory():
+	PlayerData.add_to_inventory(\"baits\", item_name)
+
+func execute_button_behaviour():
+	add_to_inventory()
+
+
+
+
+
+
+"
+
+[node name="BaitButtonTemplate" instance=ExtResource( 1 )]
+custom_fonts/font = SubResource( 1 )
+script = SubResource( 2 )

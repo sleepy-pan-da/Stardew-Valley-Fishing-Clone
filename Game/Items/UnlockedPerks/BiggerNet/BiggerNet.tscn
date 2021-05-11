@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Game/Items/UnlockedPerks/PerkTemplate.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Game/Items/UnlockedPerks/BiggerNet/BiggerNet.gd" type="Script" id=2]
+
+[node name="BiggerNet" instance=ExtResource( 1 )]
+script = ExtResource( 2 )
+
+[node name="PerkName" parent="VBoxContainer" index="0"]
+margin_bottom = 17.0
+text = "   Bigger Net"
+
+[node name="Cost" parent="VBoxContainer" index="1"]
+margin_top = 21.0
+margin_bottom = 39.0
+text = "    Cost: 1000G"
+
+[node name="Description" parent="VBoxContainer" index="2"]
+margin_top = 43.0
+margin_bottom = 68.0
+text = "    Increase fishing bar area by 
+	    1.25x."
+
+[node name="PerkSlotConsumption" parent="VBoxContainer" index="3"]
+margin_top = 72.0
+text = "    Consumes 1 perk slot"

@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Game/Loadout/Loadout.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Game/Loadout/LoadoutFromFishing.gd" type="Script" id=2]
+
+[node name="LoadoutFromFishing" instance=ExtResource( 1 )]
+script = ExtResource( 2 )
+
+[node name="GoBackToMenuButton" parent="." index="1"]
+text = "Go back to fishing?"

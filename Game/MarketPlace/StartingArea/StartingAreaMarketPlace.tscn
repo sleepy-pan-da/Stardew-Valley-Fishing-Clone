@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Game/MarketPlace/MarketPlaceTemplate.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Game/MarketPlace/StartingArea/StartingAreaMarketPlace.gd" type="Script" id=2]
+[ext_resource path="res://Assets/Art/Fonts/Space_Grotesk/static/SpaceGrotesk-Light.ttf" type="DynamicFontData" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 3 )
+
+[node name="StartingAreaMarketPlace" instance=ExtResource( 1 )]
+script = ExtResource( 2 )
+
+[node name="SellFish" parent="Shops" index="0"]
+margin_bottom = 46.0
+
+[node name="GeneralVendor" type="Button" parent="Shops" index="1"]
+margin_top = 50.0
+margin_right = 144.0
+margin_bottom = 96.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = SubResource( 1 )
+text = "General Vendor"
+[connection signal="pressed" from="Shops/GeneralVendor" to="." method="_on_GeneralVendor_pressed"]

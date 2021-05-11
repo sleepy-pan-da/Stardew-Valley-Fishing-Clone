@@ -1,0 +1,89 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Assets/Art/Fonts/Space_Grotesk/static/SpaceGrotesk-Bold.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Assets/Art/Fonts/Space_Grotesk/static/SpaceGrotesk-Light.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://Game/Items/MapTemplate/MapTemplate.gd" type="Script" id=3]
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 0.411765, 0.34902, 0.317647, 1 )
+
+[sub_resource type="DynamicFont" id=1]
+size = 10
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 8
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 8
+font_data = ExtResource( 2 )
+
+[node name="MapTemplate" type="Panel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_bottom = -186.0
+rect_min_size = Vector2( 0, 70 )
+custom_styles/panel = SubResource( 4 )
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+margin_right = 143.0
+margin_bottom = 73.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MapName" type="Label" parent="VBoxContainer"]
+margin_right = 143.0
+margin_bottom = 21.0
+size_flags_horizontal = 3
+size_flags_vertical = 7
+custom_fonts/font = SubResource( 1 )
+text = "  Map Name"
+
+[node name="AreaLvl" type="Label" parent="VBoxContainer"]
+margin_top = 25.0
+margin_right = 143.0
+margin_bottom = 47.0
+size_flags_vertical = 3
+custom_fonts/font = SubResource( 2 )
+text = "   Area Level: 999"
+autowrap = true
+
+[node name="Description" type="Label" parent="VBoxContainer"]
+margin_top = 51.0
+margin_right = 143.0
+margin_bottom = 73.0
+size_flags_vertical = 3
+custom_fonts/font = SubResource( 2 )
+text = "   Description"
+autowrap = true
+
+[node name="Cost" type="Label" parent="."]
+margin_left = 70.3213
+margin_top = 10.0
+margin_right = 127.321
+margin_bottom = 26.0
+size_flags_horizontal = 3
+size_flags_vertical = 0
+custom_fonts/font = SubResource( 2 )
+text = "   Cost: 999g"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BuyButton" type="Button" parent="."]
+margin_left = 74.0904
+margin_top = 28.6991
+margin_right = 112.09
+margin_bottom = 48.6991
+custom_fonts/font = SubResource( 3 )
+text = "Buy"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="BuyButton" to="." method="_on_BuyButton_pressed"]

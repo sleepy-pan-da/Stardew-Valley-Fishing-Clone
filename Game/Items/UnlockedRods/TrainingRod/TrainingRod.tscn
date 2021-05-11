@@ -1,0 +1,31 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Game/Items/UnlockedRods/RodTemplate.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Game/Items/UnlockedRods/TrainingRod/TrainingRod.gd" type="Script" id=2]
+
+[node name="TrainingRod" instance=ExtResource( 1 )]
+script = ExtResource( 2 )
+
+[node name="RodName" parent="VBoxContainer" index="0"]
+margin_bottom = 14.0
+text = "  Training Rod"
+
+[node name="AreaLvl" parent="VBoxContainer" index="1"]
+margin_top = 18.0
+margin_bottom = 33.0
+text = "   Up to Area lvl 2"
+
+[node name="PerkSlotsQty" parent="VBoxContainer" index="2"]
+margin_top = 37.0
+margin_bottom = 52.0
+text = "   Perk slots: 2"
+
+[node name="SpecialTrait" parent="VBoxContainer" index="3"]
+visible = false
+
+[node name="Description" parent="VBoxContainer" index="4"]
+margin_top = 56.0
+text = "   Rocky would be proud."
+
+[node name="Cost" parent="." index="1"]
+text = "   Cost: 1000G"

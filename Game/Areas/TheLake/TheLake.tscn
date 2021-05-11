@@ -1,0 +1,38 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Game/Areas/AreaTemplate.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Game/Areas/TheLake/TheLake.gd" type="Script" id=2]
+[ext_resource path="res://Assets/Art/Fonts/Space_Grotesk/static/SpaceGrotesk-Light.ttf" type="DynamicFontData" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 3 )
+
+[node name="TheLake" instance=ExtResource( 1 )]
+script = ExtResource( 2 )
+
+[node name="YouAreAtLabel" parent="." index="0"]
+text = "You are at
+The Lake"
+
+[node name="TravelButton" parent="ScrollContainer/VBoxContainer" index="0"]
+margin_bottom = 66.0
+
+[node name="FishButton" type="Button" parent="ScrollContainer/VBoxContainer" index="1"]
+margin_top = 70.0
+margin_right = 143.0
+margin_bottom = 136.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = SubResource( 1 )
+text = "Fish"
+
+[node name="BountyButton" type="Button" parent="ScrollContainer/VBoxContainer" index="2"]
+margin_top = 140.0
+margin_right = 143.0
+margin_bottom = 206.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = SubResource( 1 )
+text = "Bounties"
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/FishButton" to="." method="_on_FishButton_pressed"]
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/BountyButton" to="." method="_on_BountyButton_pressed"]

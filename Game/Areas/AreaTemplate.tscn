@@ -1,0 +1,58 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Assets/Art/Fonts/Space_Grotesk/static/SpaceGrotesk-Bold.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Assets/Art/Fonts/Space_Grotesk/static/SpaceGrotesk-Light.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://Game/Areas/AreaTemplate.gd" type="Script" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+font_data = ExtResource( 2 )
+
+[node name="AreaTemplate" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="YouAreAtLabel" type="Label" parent="."]
+margin_right = 143.0
+margin_bottom = 48.0
+custom_fonts/font = SubResource( 1 )
+align = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+margin_top = 50.0
+margin_right = 143.0
+margin_bottom = 256.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer"]
+margin_right = 143.0
+margin_bottom = 206.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="TravelButton" type="Button" parent="ScrollContainer/VBoxContainer"]
+margin_right = 143.0
+margin_bottom = 101.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = SubResource( 2 )
+text = "Travel"
+
+[node name="SaveButton" type="Button" parent="ScrollContainer/VBoxContainer"]
+margin_top = 105.0
+margin_right = 143.0
+margin_bottom = 206.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = SubResource( 2 )
+text = "Save"
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/TravelButton" to="." method="_on_TravelButton_pressed"]
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/SaveButton" to="." method="_on_SaveButton_pressed"]

@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Game/UI/BuyItemButtonTemplate.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Game/Items/ItemsSoldButtons/Rods/RodButtonTemplate.gd" type="Script" id=2]
+
+[node name="RodButtonTemplate" instance=ExtResource( 1 )]
+margin_right = 132.0
+script = ExtResource( 2 )

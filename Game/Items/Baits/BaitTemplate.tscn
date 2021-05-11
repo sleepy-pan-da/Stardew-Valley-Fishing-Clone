@@ -1,0 +1,104 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Assets/Art/Fonts/Space_Grotesk/static/SpaceGrotesk-Bold.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Assets/Art/Fonts/Space_Grotesk/static/SpaceGrotesk-Light.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://Game/Items/Baits/BaitTemplate.gd" type="Script" id=3]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.411765, 0.34902, 0.317647, 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 10
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 8
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 8
+font_data = ExtResource( 2 )
+
+[node name="BaitTemplate" type="Panel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_bottom = -192.0
+rect_min_size = Vector2( 0, 90 )
+custom_styles/panel = SubResource( 1 )
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+margin_right = 76.0
+margin_bottom = 73.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BaitName" type="Label" parent="VBoxContainer"]
+margin_right = 76.0
+margin_bottom = 21.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = SubResource( 2 )
+text = "  Bait Name"
+
+[node name="SpecialTrait" type="Label" parent="VBoxContainer"]
+margin_top = 25.0
+margin_right = 76.0
+margin_bottom = 47.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = SubResource( 3 )
+text = "   Special Trait"
+autowrap = true
+
+[node name="Description" type="Label" parent="VBoxContainer"]
+margin_top = 51.0
+margin_right = 76.0
+margin_bottom = 73.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = SubResource( 3 )
+text = "   Description"
+autowrap = true
+
+[node name="Cost" type="Label" parent="."]
+margin_left = 74.751
+margin_top = 8.94576
+margin_right = 132.751
+margin_bottom = 24.9458
+size_flags_horizontal = 3
+size_flags_vertical = 0
+custom_fonts/font = SubResource( 3 )
+text = "   Cost: 9999g"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BuyButton" type="Button" parent="."]
+margin_left = 84.0949
+margin_top = 25.362
+margin_right = 122.095
+margin_bottom = 45.362
+custom_fonts/font = SubResource( 4 )
+text = "Buy"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="YouOwn" type="Label" parent="."]
+margin_left = 74.751
+margin_top = 50.6629
+margin_right = 132.751
+margin_bottom = 66.6629
+size_flags_horizontal = 3
+size_flags_vertical = 0
+custom_fonts/font = SubResource( 3 )
+text = "   You own: 999"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="BuyButton" to="." method="_on_BuyButton_pressed"]

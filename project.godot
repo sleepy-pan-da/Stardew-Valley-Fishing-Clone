@@ -1,0 +1,89 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[ {
+"base": "Node",
+"class": "BobberBehaviour",
+"language": "GDScript",
+"path": "res://Game/Fishing/Bobber/BobberBehaviour.gd"
+} ]
+_global_script_class_icons={
+"BobberBehaviour": ""
+}
+
+[application]
+
+config/name="Fishing with Junsheng December Version"
+run/main_scene="res://Game/TitleScreen/TitleScreen.tscn"
+config/use_custom_user_dir=true
+config/icon="res://icon.png"
+
+[autoload]
+
+PlayerData="*res://Game/Singletons/PlayerData.gd"
+FishData="*res://Game/Singletons/FishData.gd"
+BackgroundMusic="*res://Game/BackgroundMusic/BackgroundMusic.tscn"
+ShopData="*res://Game/Singletons/ShopData.gd"
+AreaData="*res://Game/Singletons/AreaData.gd"
+ItemData="*res://Game/Singletons/ItemData.gd"
+BountyData="*res://Game/Bounties/BountyData.gd"
+PerkData="*res://Game/Perks/PerkData.gd"
+
+[display]
+
+window/size/width=144
+window/size/height=256
+window/size/test_width=288
+window/size/test_height=512
+window/handheld/orientation="portrait"
+window/stretch/mode="2d"
+window/stretch/aspect="expand"
+
+[importer_defaults]
+
+texture={
+"compress/bptc_ldr": 0,
+"compress/hdr_mode": 0,
+"compress/lossy_quality": 0.7,
+"compress/mode": 0,
+"compress/normal_map": 0,
+"detect_3d": false,
+"flags/anisotropic": false,
+"flags/filter": false,
+"flags/mipmaps": false,
+"flags/repeat": 0,
+"flags/srgb": 2,
+"process/HDR_as_SRGB": false,
+"process/fix_alpha_border": true,
+"process/invert_color": false,
+"process/premult_alpha": false,
+"size_limit": 0,
+"stream": false,
+"svg/scale": 1.0
+}
+
+[input]
+
+left_click={
+"deadzone": 0.5,
+"events": [ Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"button_mask":0,"position":Vector2( 0, 0 ),"global_position":Vector2( 0, 0 ),"factor":1.0,"button_index":1,"pressed":false,"doubleclick":false,"script":null)
+ ]
+}
+
+[layer_names]
+
+2d_physics/layer_2="RodEnds"
+2d_physics/layer_3="Fish"
+2d_physics/layer_4="Treasure"
+
+[rendering]
+
+quality/2d/use_pixel_snap=true
+environment/default_environment="res://default_env.tres"

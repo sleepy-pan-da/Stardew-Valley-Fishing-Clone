@@ -1,0 +1,75 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Game/UI/UiTemplate.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Game/Perks/Perks.gd" type="Script" id=2]
+[ext_resource path="res://Assets/Art/Fonts/Space_Grotesk/static/SpaceGrotesk-Light.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://Game/Perks/AvailablePerkVBox.gd" type="Script" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 10
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 8
+font_data = ExtResource( 3 )
+
+[node name="Perks" instance=ExtResource( 1 )]
+script = ExtResource( 2 )
+
+[node name="Label" parent="." index="0"]
+text = "Click to equip perks"
+
+[node name="GoBackToMenuButton" parent="." index="1"]
+text = "Go back to loadout"
+
+[node name="FilledPerkSlots" type="Label" parent="." index="2"]
+margin_left = 4.24265
+margin_top = 26.8701
+margin_right = 77.2426
+margin_bottom = 40.8701
+custom_fonts/font = SubResource( 1 )
+text = "Filled Perk Slots 5/7"
+
+[node name="UnlockedPerks" type="Label" parent="." index="3"]
+margin_left = 4.24265
+margin_top = 48.7905
+margin_right = 77.2427
+margin_bottom = 62.7905
+custom_fonts/font = SubResource( 1 )
+text = "#Unlocked Perks#"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ScrollContainer" type="ScrollContainer" parent="." index="4"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 9.0
+margin_top = 66.0
+margin_right = -11.0
+margin_bottom = -61.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="UnlockedPerkVBox" type="VBoxContainer" parent="ScrollContainer" index="0"]
+margin_right = 124.0
+margin_bottom = 128.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Description" type="Label" parent="." index="5"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 8.0
+margin_top = 181.0
+margin_bottom = -1.0
+custom_fonts/font = SubResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="GoBackToMenuButton" to="." method="_on_GoBackToMenuButton_pressed"]

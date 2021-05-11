@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Game/Items/UnlockedRods/RodTemplate.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Game/Items/UnlockedRods/WoodenRod/WoodenRod.gd" type="Script" id=2]
+
+[node name="WoodenRod" instance=ExtResource( 1 )]
+script = ExtResource( 2 )
+
+[node name="RodName" parent="VBoxContainer" index="0"]
+text = "   Wooden Rod"
+
+[node name="AreaLvl" parent="VBoxContainer" index="1"]
+text = "   Up to Area lvl 3"
+
+[node name="PerkSlotsQty" parent="VBoxContainer" index="2"]
+text = "   Perk slots: 3"
+
+[node name="SpecialTrait" parent="VBoxContainer" index="3"]
+visible = false
+
+[node name="Description" parent="VBoxContainer" index="4"]
+margin_top = 45.0
+margin_bottom = 70.0
+text = "   This could easily be mistaken
+   as a tree branch."
+
+[node name="Cost" parent="." index="1"]
+text = "   Cost: 10000g"

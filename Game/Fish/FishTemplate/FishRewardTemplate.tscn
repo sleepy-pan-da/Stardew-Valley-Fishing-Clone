@@ -1,0 +1,118 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://Assets/Art/Fonts/Space_Grotesk/static/SpaceGrotesk-Bold.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Assets/Art/Fonts/Space_Grotesk/static/SpaceGrotesk-Light.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://Game/Fish/FishTemplate/FishRewardTemplate.gd" type="Script" id=3]
+[ext_resource path="res://Assets/Art/Fonts/Space_Grotesk/static/SpaceGrotesk-Regular.ttf" type="DynamicFontData" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 10
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 12
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 12
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 12
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 10
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 12
+font_data = ExtResource( 2 )
+
+[node name="FishRewardTemplate" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="YouCaught" type="Label" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 1.0
+margin_bottom = -243.0
+custom_fonts/font = SubResource( 1 )
+text = "Congrats! You caught a"
+align = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FishName" type="Label" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 14.6222
+margin_bottom = -217.378
+custom_fonts/font = SubResource( 2 )
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FishRarity" type="RichTextLabel" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 40.0302
+margin_bottom = -197.97
+custom_fonts/normal_font = SubResource( 3 )
+bbcode_enabled = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Reward" type="Label" parent="."]
+margin_top = 69.8067
+margin_right = 143.0
+margin_bottom = 90.8067
+custom_fonts/font = SubResource( 4 )
+text = "Reward:"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FishLoot" type="Label" parent="."]
+margin_top = 89.0
+margin_right = 144.0
+margin_bottom = 131.0
+custom_fonts/font = SubResource( 5 )
+align = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Treasure" type="Label" parent="."]
+margin_top = 136.0
+margin_right = 144.0
+margin_bottom = 177.0
+custom_fonts/font = SubResource( 5 )
+align = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 206.0
+custom_fonts/font = SubResource( 6 )
+text = "i can do better"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/bubble3.wav-1766e3cb29579339219c9d484dbd6328.sample"
+
+[deps]
+
+source_file="res://Assets/Sound/SoundEffects/bubble3.wav"
+dest_files=[ "res://.import/bubble3.wav-1766e3cb29579339219c9d484dbd6328.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

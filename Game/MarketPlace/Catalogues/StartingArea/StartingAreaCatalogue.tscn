@@ -1,0 +1,146 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Game/MarketPlace/Catalogues/CatalogueTemplate.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Game/MarketPlace/Catalogues/StartingArea/StartingAreaCatalogue.gd" type="Script" id=2]
+[ext_resource path="res://Assets/Art/Fonts/Space_Grotesk/static/SpaceGrotesk-Light.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://Assets/Art/Fonts/Space_Grotesk/static/SpaceGrotesk-Regular.ttf" type="DynamicFontData" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 10
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=3]
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 10
+font_data = ExtResource( 3 )
+
+[node name="StartingAreaCatalogue" instance=ExtResource( 1 )]
+script = ExtResource( 2 )
+
+[node name="ScrollContainer" parent="." index="2"]
+margin_top = 28.0
+
+[node name="VBoxContainer" parent="ScrollContainer" index="0"]
+margin_right = 132.0
+margin_bottom = 586.0
+
+[node name="Area1Lvl2Bait" type="Label" parent="ScrollContainer/VBoxContainer" index="0"]
+margin_right = 132.0
+margin_bottom = 21.0
+custom_fonts/font = SubResource( 1 )
+text = " Area1Lvl2Bait"
+
+[node name="Area1Lvl2Description" type="Label" parent="ScrollContainer/VBoxContainer" index="1"]
+margin_top = 25.0
+margin_right = 132.0
+margin_bottom = 70.0
+custom_fonts/font = SubResource( 2 )
+text = "-Allows you to catch lvl2 
+ fish in area 1
+"
+
+[node name="Area1Lvl3Bait" type="Label" parent="ScrollContainer/VBoxContainer" index="2"]
+margin_top = 74.0
+margin_right = 132.0
+margin_bottom = 95.0
+custom_fonts/font = SubResource( 3 )
+text = " Area1Lvl3Bait"
+
+[node name="Area1Lvl3Description" type="Label" parent="ScrollContainer/VBoxContainer" index="3"]
+margin_top = 99.0
+margin_right = 132.0
+margin_bottom = 144.0
+custom_fonts/font = SubResource( 4 )
+text = "-Allows you to catch lvl3 
+ fish in area 1
+"
+
+[node name="AmateurRod" type="Label" parent="ScrollContainer/VBoxContainer" index="4"]
+margin_top = 148.0
+margin_right = 132.0
+margin_bottom = 169.0
+custom_fonts/font = SubResource( 3 )
+text = " Amateur Rod"
+
+[node name="AmateurRodDescription" type="Label" parent="ScrollContainer/VBoxContainer" index="5"]
+margin_top = 173.0
+margin_right = 132.0
+margin_bottom = 202.0
+custom_fonts/font = SubResource( 4 )
+text = "-Faster than training rod
+"
+
+[node name="BiggerNet" type="Label" parent="ScrollContainer/VBoxContainer" index="6"]
+margin_top = 206.0
+margin_right = 132.0
+margin_bottom = 227.0
+custom_fonts/font = SubResource( 3 )
+text = " Bigger Net"
+
+[node name="BiggerNetDescription" type="Label" parent="ScrollContainer/VBoxContainer" index="7"]
+margin_top = 231.0
+margin_right = 132.0
+margin_bottom = 292.0
+custom_fonts/font = SubResource( 4 )
+text = "-Increase fishing bar by 
+ 1.25x
+-Consumes 2 slots
+"
+
+[node name="HeadStart" type="Label" parent="ScrollContainer/VBoxContainer" index="8"]
+margin_top = 296.0
+margin_right = 132.0
+margin_bottom = 317.0
+custom_fonts/font = SubResource( 3 )
+text = " Head Start"
+
+[node name="HeadStartDescription" type="Label" parent="ScrollContainer/VBoxContainer" index="9"]
+margin_top = 321.0
+margin_right = 132.0
+margin_bottom = 382.0
+custom_fonts/font = SubResource( 4 )
+text = "-Fishing progress bar
+ is partially filled initially
+-Consumes 2 slots
+"
+
+[node name="TreasureMagnet" type="Label" parent="ScrollContainer/VBoxContainer" index="10"]
+margin_top = 386.0
+margin_right = 132.0
+margin_bottom = 431.0
+custom_fonts/font = SubResource( 3 )
+text = " Treasure 
+ Magnet"
+
+[node name="TreasureMagnetDescription" type="Label" parent="ScrollContainer/VBoxContainer" index="11"]
+margin_top = 435.0
+margin_right = 132.0
+margin_bottom = 496.0
+custom_fonts/font = SubResource( 4 )
+text = "-Treasures appear more
+ often (20%->40%)
+-Consumes 2 slots
+"
+
+[node name="FishMonger" type="Label" parent="ScrollContainer/VBoxContainer" index="12"]
+margin_top = 500.0
+margin_right = 132.0
+margin_bottom = 521.0
+custom_fonts/font = SubResource( 3 )
+text = " Fishmonger"
+
+[node name="FishMongerDescription" type="Label" parent="ScrollContainer/VBoxContainer" index="13"]
+margin_top = 525.0
+margin_right = 132.0
+margin_bottom = 586.0
+custom_fonts/font = SubResource( 4 )
+text = "-Fishes are worth 1.25x
+ more
+-Consumes 2 slots
+"
+[connection signal="pressed" from="GoBackToMenuButton" to="." method="_on_GoBackToMenuButton_pressed"]

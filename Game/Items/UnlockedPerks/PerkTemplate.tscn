@@ -1,0 +1,96 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Assets/Art/Fonts/Space_Grotesk/static/SpaceGrotesk-Bold.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Assets/Art/Fonts/Space_Grotesk/static/SpaceGrotesk-Light.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://Game/Items/UnlockedPerks/PerkTemplate.gd" type="Script" id=3]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.41, 0.348705, 0.3157, 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 10
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 8
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 8
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 8
+font_data = ExtResource( 2 )
+
+[node name="PerkTemplate" type="Panel"]
+margin_right = 144.0
+margin_bottom = 80.0
+rect_min_size = Vector2( 0, 90 )
+custom_styles/panel = SubResource( 1 )
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_right = -7.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PerkName" type="Label" parent="VBoxContainer"]
+margin_right = 133.0
+margin_bottom = 19.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = SubResource( 2 )
+text = "   Perk Name"
+
+[node name="Cost" type="Label" parent="VBoxContainer"]
+margin_top = 23.0
+margin_right = 133.0
+margin_bottom = 43.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = SubResource( 3 )
+text = "    Cost: 999G"
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Description" type="Label" parent="VBoxContainer"]
+margin_top = 47.0
+margin_right = 133.0
+margin_bottom = 66.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = SubResource( 4 )
+text = "    Description"
+autowrap = true
+
+[node name="PerkSlotConsumption" type="Label" parent="VBoxContainer"]
+margin_top = 70.0
+margin_right = 133.0
+margin_bottom = 90.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = SubResource( 4 )
+text = "    Consumes 999 perk slots"
+autowrap = true
+
+[node name="BuyButton" type="Button" parent="."]
+margin_left = 84.1459
+margin_top = 16.4915
+margin_right = 122.146
+margin_bottom = 36.4915
+custom_fonts/font = SubResource( 5 )
+text = "Buy"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="BuyButton" to="." method="_on_BuyButton_pressed"]

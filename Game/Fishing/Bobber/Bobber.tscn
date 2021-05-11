@@ -1,0 +1,67 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Game/Fishing/Bobber/Bobber.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Art/BobberState/Bitten.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Art/BobberState/NotBitten.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Art/BobberState/Stale.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Art/BobberState/SoftlyBitten.png" type="Texture" id=5]
+[ext_resource path="res://Assets/Art/Fonts/Space_Grotesk/static/SpaceGrotesk-Light.ttf" type="DynamicFontData" id=6]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 4 ) ],
+"loop": true,
+"name": "Stale",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 2 ) ],
+"loop": true,
+"name": "Bitten",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 3 ) ],
+"loop": true,
+"name": "NotBitten",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 5 ) ],
+"loop": true,
+"name": "SoftlyBitten",
+"speed": 5.0
+} ]
+
+[sub_resource type="DynamicFont" id=2]
+size = 8
+font_data = ExtResource( 6 )
+
+[node name="Bobber" type="AnimatedSprite"]
+frames = SubResource( 1 )
+animation = "NotBitten"
+script = ExtResource( 1 )
+
+[node name="Instructions" type="Label" parent="."]
+margin_left = -38.1619
+margin_top = 12.8648
+margin_right = 36.8381
+margin_bottom = 105.865
+custom_fonts/font = SubResource( 2 )
+text = "Click \"Pull Rod\" when it turns red!"
+align = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="WaitingTimeBeforeActualBite" type="Timer" parent="."]
+one_shot = true
+
+[node name="DurationOfActualBite" type="Timer" parent="."]
+one_shot = true
+
+[node name="InstructionsFadeOut" type="Timer" parent="."]
+wait_time = 1.5
+one_shot = true
+autostart = true
+[connection signal="timeout" from="WaitingTimeBeforeActualBite" to="." method="_on_WaitingTimeBeforeActualBite_timeout"]
+[connection signal="timeout" from="DurationOfActualBite" to="." method="_on_DurationOfActualBite_timeout"]
+[connection signal="timeout" from="InstructionsFadeOut" to="." method="_on_InstructionsFadeOut_timeout"]

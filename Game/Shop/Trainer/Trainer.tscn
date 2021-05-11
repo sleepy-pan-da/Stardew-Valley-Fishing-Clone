@@ -1,0 +1,11 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Game/Shop/ShopTemplate.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Game/Shop/Trainer/Trainer.gd" type="Script" id=2]
+[ext_resource path="res://Game/Shop/Trainer/Items.gd" type="Script" id=3]
+
+[node name="Trainer" instance=ExtResource( 1 )]
+script = ExtResource( 2 )
+
+[node name="Items" parent="ItemsOnSale" index="0"]
+script = ExtResource( 3 )

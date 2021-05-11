@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Assets/Sound/SeaSound/376710__plantmonkey__cornish-seacave.wav" type="AudioStream" id=1]
+[ext_resource path="res://Game/BackgroundMusic/BackgroundMusic.gd" type="Script" id=2]
+[ext_resource path="res://Assets/Sound/SoundEffects/travel.wav" type="AudioStream" id=3]
+
+[node name="BackgroundMusic" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="SeaSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 1 )
+volume_db = -10.0
+
+[node name="GiveFishSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+volume_db = -10.0
